@@ -11,9 +11,9 @@
 |
 */
 
-DB::listen(function ($event) {
-    dump($event->sql);
-});
+// DB::listen(function ($event) {
+//     dump($event->sql);
+// });
 
 Route::get('/', function () {
     return view('welcome');
@@ -24,4 +24,5 @@ Route::auth();
 Route::get('/home', 'HomeController@index');
 
 Route::resource('user', 'UserController');
+Route::resource('post', 'PostController');
 
